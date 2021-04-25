@@ -1,3 +1,31 @@
 from django.db import models
+from datetime import datetime
 
-# Create your models here.
+class Apartment(models.Model):
+    title = models.CharField(max_length=100)
+    description = models.TextField(blank=True)
+    square_meter = models.IntegerField(default=0)
+    price = models.IntegerField(default=0)
+    is_negotiabale = models.BooleanField(default=False)
+    main_picture = models.ImageField(upload_to='photos/%Y/%m/%d/')
+    main_1 = models.ImageField(upload_to='photos/%Y/%m/%d/', blank=True)
+    main_2 = models.ImageField(upload_to='photos/%Y/%m/%d/', blank=True)
+    main_3 = models.ImageField(upload_to='photos/%Y/%m/%d/', blank=True)
+    main_4 = models.ImageField(upload_to='photos/%Y/%m/%d/', blank=True)
+    main_5 = models.ImageField(upload_to='photos/%Y/%m/%d/', blank=True)
+    master_bedroom = models.IntegerField(default=0)
+    bathroom = models.IntegerField(default=0)
+    kitchen = models.IntegerField(default=0)
+    guest_toilet = models.BooleanField(default=True)
+    corridor = models.BooleanField(default=True)
+    store = models.BooleanField(default=True)
+    parking_garage = models.BooleanField(default=True)
+    elevator = models.BooleanField(default=True)
+    cctv = models.BooleanField(default=True)
+    garbage_shooter = models.BooleanField(default=True)
+    generator = models.BooleanField(default=True)
+    wifi = models.BooleanField(default=True)
+    is_published = models.BooleanField(default=True)
+    created_at = models.DateTimeField(default=datetime.now, blank=True)
+    def __str__(self):
+        return self(title)
