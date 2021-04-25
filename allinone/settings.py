@@ -42,6 +42,7 @@ INSTALLED_APPS = [
     'customers',
     'feedbacks',
     'payment',
+    'sliders',
     'rest_framework'
 ]
 
