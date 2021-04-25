@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'feedbacks',
     'payment',
     'sliders',
+    'videos',
     'rest_framework'
 ]
 
