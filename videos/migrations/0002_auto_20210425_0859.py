@@ -22,7 +22,7 @@ class Migration(migrations.Migration):
         migrations.AddField(
             model_name='video',
             name='location',
-            field=models.ForeignKey(default=django.utils.timezone.now, on_delete=django.db.models.deletion.DO_NOTHING, to='videos.videolocation'),
+            field=models.ForeignKey(on_delete=django.db.models.deletion.DO_NOTHING, to='videos.videolocation'),
             preserve_default=False,
         ),
     ]
