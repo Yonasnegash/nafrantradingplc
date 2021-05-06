@@ -12,6 +12,6 @@ router.register('api/feedbacks', FeedbackViewSet, 'feedbacks')
 router.register('api/apartments', ApartmentViewSet, 'apartments')
 router.register('api/sliders', SliderViewSet, 'sliders')
 router.register('api/videos', VideoViewSet, 'videos')
-router.register('api/videos/location' VideoLocationViewSet, 'video_location')
+router.register('api/videos/location', VideoLocationViewSet, 'video_location')
 
 urlpatterns = router.urls

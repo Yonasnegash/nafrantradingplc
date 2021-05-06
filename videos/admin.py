@@ -13,9 +13,9 @@ class VideoAdmin(admin.ModelAdmin):
 admin.site.register(Video, VideoAdmin)
 
 class VideoLocationAdmin(admin.ModelAdmin):
-    list_display = ('name', )
-    list_display_links = ('id', 'name')
-    list_filter = ('name',)
+    list_display = ('id', 'title')
+    list_display_links = ('id', 'title')
+    list_filter = ('title',)
     list_per_page = 25
 
 admin.site.register(VideoLocation, VideoLocationAdmin)
