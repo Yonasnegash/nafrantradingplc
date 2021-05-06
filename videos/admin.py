@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from .models import Video
+from .models import Video, VideoLocation
 
 class VideoAdmin(admin.ModelAdmin):
     list_display = ('id', 'name', 'is_active')
@@ -11,3 +11,11 @@ class VideoAdmin(admin.ModelAdmin):
     list_per_page = 25
 
 admin.site.register(Video, VideoAdmin)
+
+class VideoLocationAdmin(admin.ModelAdmin):
+    list_display = ('name', )
+    list_display_links = ('id', 'name')
+    list_filter = ('name',)
+    list_per_page = 25
+
+admin.site.register(VideoLocation, VideoLocationAdmin)
